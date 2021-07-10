@@ -55,7 +55,7 @@ export default class App extends Component {
 
         <Section title="Contacts">
           <Filter
-            filter={this.state.filter}
+            value={this.state.filter}
             onChange={this.handleFilterChange}
           />
           <ContactsList
