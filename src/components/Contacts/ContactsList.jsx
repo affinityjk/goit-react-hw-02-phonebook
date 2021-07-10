@@ -1,5 +1,7 @@
 import PropTypes from "prop-types";
 import { Contacts, Item, Button } from "./ContactsList.styled";
+import { IoPerson } from "react-icons/io5";
+import { ImPhone } from "react-icons/im";
 
 export const ContactsList = ({ contacts, onDeleteClick }) => {
   return (
@@ -7,8 +9,15 @@ export const ContactsList = ({ contacts, onDeleteClick }) => {
       {contacts.map(({ id, name, number }) => {
         return (
           <Item key={id}>
-            <span>{name}:</span>
-            <span>{number}</span>
+            <span>
+              <IoPerson size={14} color="steelblue" />
+              {name}:
+            </span>
+
+            <span>
+              <ImPhone size={14} color="steelblue" />
+              {number}
+            </span>
             <Button type="button" onClick={() => onDeleteClick(id)}>
               Delete
             </Button>

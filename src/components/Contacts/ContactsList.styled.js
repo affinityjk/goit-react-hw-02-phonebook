@@ -20,7 +20,13 @@ export const Item = styled.li`
 
   & span {
     display: inline-flex;
+    align-items: center;
     margin-left: 10px;
+    margin-right: 40px;
+  }
+
+  & svg {
+    margin-right: 5px;
   }
 `;
 
