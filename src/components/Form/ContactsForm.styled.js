@@ -1,4 +1,3 @@
-import { DebounceInput } from "react-debounce-input";
 import styled from "@emotion/styled/macro";
 
 export const Form = styled.form`
@@ -6,7 +5,7 @@ export const Form = styled.form`
   flex-direction: column;
 `;
 
-export const Input = styled(DebounceInput)``;
+export const Input = styled.input``;
 
 export const Label = styled.label`
   margin-bottom: 10px;

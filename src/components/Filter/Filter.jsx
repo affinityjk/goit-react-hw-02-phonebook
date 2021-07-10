@@ -1,18 +1,16 @@
 import PropTypes from "prop-types";
 import { nanoid } from "nanoid";
-import { DebounceInput } from "react-debounce-input";
-import { Label } from "./Filter.styled";
+import { Label, Input } from "./Filter.styled";
 
 export const Filter = ({ filter, onChange }) => {
   return (
     <>
       <Label htmlFor={`id-${nanoid(3)}`}>Find contacts by name</Label>
-      <DebounceInput
+      <Input
         id={`id-${nanoid(3)}`}
         type="text"
         name="name"
         value={filter}
-        debounceTimeout={500}
         onChange={onChange}
         placeholder="Search"
       />
